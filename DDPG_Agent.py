@@ -37,7 +37,7 @@ class Agent():
         """
         self.state_size = state_size
         self.action_size = action_size
-        self.seed = random.seed(random_seed)
+        random.seed(seed)
         self.epsilon = EPSILON
 
         # Actor Network (w/ Target Network)
@@ -88,6 +88,10 @@ class Agent():
         return action
 
     def reset(self):
+        """
+        Reset the internal state (= noise) to mean (mu).
+        
+        """
         self.noise.reset()
 
     def update(self, experiences, gamma):
@@ -154,6 +158,12 @@ class Agent():
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
     def hard_update(self, target, source):
+        """hard update of model parameters.
+           model parameters are copied .
+        ======
+            source_parameters: parameters to be copied
+            target_parameters: parameters will be copied into
+        """
         for target_param, param in zip(target.parameters(), source.parameters()):
             target_param.data.copy_(param.data)         
 
