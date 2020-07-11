@@ -18,6 +18,10 @@ The observation space consists of 33 variables corresponding to position, rotati
 - ddpg_agent.py : Code for the policy followed by the agent.
 - model.py : Model architecture of the deep neural networks.
 - Continuous_Control.ipynb - Contains the necessary code for training and testing.
+- nohup.out contains the code output for the notebook file
+- .pth files are the checkpoints created during training the agents
+- scores.npy contains the final scores after training.
+- plots folder contains the episode vs score plot
 
 ### Distributed Training
 
