@@ -22,6 +22,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 - .pth files are the checkpoints created during training the agents
 - scores.npy contains the final scores after training.
 - plots folder contains the episode vs score plot
+- Report.pdf Contains the project report
 
 ### Distributed Training
 
